@@ -1,0 +1,26 @@
+// Write a C++ problem to print the pascal traingle using (*) without returning the value.
+
+
+
+#include <bits/stdc++.h>
+using namespace std;
+
+void printPascalTriangle(int n) {
+    for (int line = 0; line < n; line++) {  // Iterate through each line
+        for (int i = 0; i < n - line - 1; i++) { // Print leading spaces
+            cout << " ";
+        }
+        for (int j = 0; j <= line; j++) {    // Print stars
+            cout << "* ";
+        }
+        cout << endl;
+    }
+}
+
+int main() {
+    int n;
+    cout << "Enter the number of rows for Pascal's Triangle: ";
+    cin >> n;
+    printPascalTriangle(n); // Call the function to print the triangle
+    return 0;
+}
