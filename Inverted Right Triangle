@@ -1,0 +1,30 @@
+// Write a C++ program to print an inverted triangle pattern of stars.
+
+//Approach 1(using nested loops)
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+    int n;
+    cout << "Enter number of rows in inverted triangle: ";
+    cin >> n;
+    for(int i=n;i>=0;i--){   // Iterate from n to 0
+        for(int j=0;j<i;j++){ // Print i stars in each row
+            cout << "* ";
+        }
+        cout << endl;    // Move to the next line after each row
+    }
+    return 0;  // End of the program
+}
+
+//Approach 2(using string function)
+#include <bits/stdc++.h>    
+using namespace std;
+int main() {
+    int n;
+    cout << "Enter number of rows in inverted triangle: ";
+    cin >> n;
+    for(int i=n;i>=0;i--){   // Iterate from n to 0
+        cout << string(i, '*') << endl; // Print i stars in each row using string function
+    }
+    return 0;  // End of the program
+}
